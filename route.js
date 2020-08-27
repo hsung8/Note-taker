@@ -32,7 +32,6 @@ module.exports = function (app) {
         // post route
         app.post("/api/notes", function (req, res) {
             let newNote = req.body;
-            newNote.id = Date.now();
             notes.push(newNote);
             updateDb();
             //return console.log(`Added new note: ${newNote.title}`);
@@ -40,12 +39,14 @@ module.exports = function (app) {
 
         // get the note using id
         app.get("/api/notes/:id", function (req, res) {
+            let noteID = req.params.id
             res.json(notes[req.params.id]);
         });
 
         // remove note by id
         app.delete("/api/notes/:id", function (req, res) {
-            notes.splice(req.params.id, 1);
+            let noteID = req.params.id
+            notes.splice(noteID, 1);
             updateDb();
         });
 
