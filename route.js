@@ -40,7 +40,7 @@ module.exports = function (app) {
         // get the note using id
         app.get("/api/notes/:id", function (req, res) {
             let noteID = req.params.id
-            res.json(notes[req.params.id]);
+            res.json(notes[noteID]);
         });
 
         // remove note by id
