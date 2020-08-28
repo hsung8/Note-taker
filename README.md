@@ -1,5 +1,5 @@
 # Note-taker
-This note taking application allows you to save notes with a title and text. 
+This note taking application allows you to save notes with a title and text. This app requires **refresh button** to check your note is added and deleted.  
 
 ## Prerequisites
 - [NodeJS](https://nodejs.org/en/)
